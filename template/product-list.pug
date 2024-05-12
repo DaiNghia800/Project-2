@@ -1,0 +1,193 @@
+extends layouts/default.pug
+include mixins/section-3.pug
+include mixins/product-item.pug
+
+block title
+ title Trang danh sách các sản phẩm
+
+block main 
+ //-Breadcrumb
+ div(class="breadcrumb")
+  div(class="container")
+   div(class="breadcrumb__wrap")
+     a(href="#" class="breadcrumb__link") Trang chủ
+     a(href="#" class="breadcrumb__link") Chó
+     a(href="#" class="breadcrumb__link") Chó nhỏ
+ //-End Breadcrumb
+
+ //-Section-3        
+ +section-3()
+ //-End Section-3
+
+ //-  Layout Product
+ div(class="layout-product")
+  div(class="container")
+   div(class="layout-product__wrap")
+    div(class="layout-product__left")
+     .filters 
+      .filters__title 
+        img(src="assets/Images/filter.svg")
+        span Bộ lọc 
+      .filters__list 
+        .filters__item 
+          .filters__item-title Giống 
+          .filters__item-box 
+            .filters__item-choose 
+              input(type="checkbox" name="giong" id="duc")
+              label(for="duc") Đực  
+            .filters__item-choose 
+              input(type="checkbox" name="giong" id="cai")
+              label(for="cai") Cái
+        .filters__item 
+          .filters__item-title Màu sắc
+          .filters__item-box 
+            .filters__item-choose 
+              input(type="checkbox" name="mauSac" id="xam")
+              label(for="xam") Xám
+            .filters__item-choose 
+              input(type="checkbox" name="mauSac" id="den")
+              label(for="den") Đen
+            .filters__item-choose 
+              input(type="checkbox" name="mauSac" id="trang")
+              label(for="trang") Trắng
+        .filters__item 
+          .filters__item-title Kích thước
+          .filters__item-box 
+            .filters__item-choose 
+              input(type="checkbox" name="kichThuoc" id="nho")
+              label(for="nho") Nhỏ  
+            .filters__item-choose 
+              input(type="checkbox" name="kichThuoc" id="vua")
+              label(for="vua") Vừa  
+            .filters__item-choose 
+              input(type="checkbox" name="kichThuoc" id="lon")
+              label(for="lon") Lớn
+    div(class="layout-product__right")
+      //- Section 5
+      .section-5 
+        .section-5__head 
+          .section-5__title Chó nhỏ
+          button.section-5__button-filter
+            img(src="assets/Images/filter.svg")
+            span Bộ lọc
+        .section-5__wrap
+          -
+            var pets = [
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO231 - Pomeranian Trắng',
+                gender: 'Đực',
+                age: '02 tháng',
+                price: '6.900.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO502 - Poodle Tiny Vàng',
+                gender: 'Cái',
+                age: '02 tháng',
+                price: '3.900.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO102 - Poodle Tiny Sepia',
+                gender: 'Đực',
+                age: '02 tháng',
+                price: '4.000.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO512 - Alaskan Malamute',
+                gender: 'Đực',
+                age: '03 tháng',
+                price: '8.900.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO231 - Pembroke Corgi',
+                gender: 'Đực',
+                age: '02 tháng',
+                price: '7.900.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO502 - Pembroke Corgi',
+                gender: 'Cái',
+                age: '02 tháng',
+                price: '9.000.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO231 - Pomeranian Trắng',
+                gender: 'Cái',
+                age: '02 tháng',
+                price: '6.500.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO512 - Poodle Tiny',
+                gender: 'Đực',
+                age: '02 tháng',
+                price: '5.000.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO231 - Pembroke Corgi',
+                gender: 'Đực',
+                age: '02 tháng',
+                price: '7.900.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO502 - Pembroke Corgi',
+                gender: 'Cái',
+                age: '02 tháng',
+                price: '9.000.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO231 - Pomeranian Trắng',
+                gender: 'Cái',
+                age: '02 tháng',
+                price: '6.500.000 VND'
+              },
+              {
+                image: 'assets/images/product-1.jpg',
+                title: 'MO512 - Poodle Tiny',
+                gender: 'Đực',
+                age: '02 tháng',
+                price: '5.000.000 VND'
+              }
+            ];
+
+          each pet in pets
+            +product-item(
+              pet.image, 
+              pet.title, 
+              pet.gender, 
+              pet.age, 
+              pet.price,
+              "product-item--three"
+            )
+      //- End Section 5
+      .pagination 
+        ul.pagination__list 
+          li.pagination_item
+            a(href="#" class="pagination__link")
+              i(class="fa-solid fa-arrow-left")
+          li.pagination__item 
+            a(href="#" class="pagination__link pagination__link--active") 1    
+          li.pagination__item 
+            a(href="#" class="pagination__link ") 2  
+          li.pagination__item 
+            a(href="#" class="pagination__link ") 3   
+          li.pagination__item 
+            a(href="#" class="pagination__link ") 4   
+          li.pagination__item 
+            a(href="#" class="pagination__link ") ...
+          li.pagination__item 
+            a(href="#" class="pagination__link ") 28
+          li.pagination__item 
+            a(href="#" class="pagination__link ") 
+              i(class="fa-solid fa-arrow-right")
+
+ //-  End Layout Product
