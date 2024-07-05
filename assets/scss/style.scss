@@ -1238,7 +1238,7 @@ a {
     &__images-thumb {
         display: flex;
         img {
-            width: calc(100%/5 - 48px/5);
+            width: 100%;
             margin-right: 12px;
             aspect-ratio: 1/1;
             object-fit: cover;

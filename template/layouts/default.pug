@@ -4,7 +4,10 @@ html
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width,initial-sacle=1.0")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css")
+    link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
     link(rel="stylesheet", href="assets/css/style.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css")
     block title
   body 
     // Header 
@@ -40,7 +43,7 @@ html
     //Footer
     footer(class="footer")
         div(class="container")
-            div(class="footer__top")
+            div(class="footer__top" data-aos="zoom-in")
                 div(class="footer__content") Đăng ký ngay để không bỏ lỡ các chương trình của chúng tôi
                 div(class="footer__form")
                     form(action="")
@@ -69,3 +72,8 @@ html
                     a(href="#") Điều khoản dịch vụ
                     a(href="#") Chính sách bảo mật
     //End Footer
+
+    script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js")
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js") 
+    script(src="assets/js/script.js")

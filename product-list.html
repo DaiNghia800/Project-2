@@ -4,7 +4,10 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-sacle=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css"/>
     <title>Trang danh sách các sản phẩm</title>
   </head>
   <body> 
@@ -42,12 +45,12 @@
     <div class="section-3">
       <div class="container">
         <div class="section-3__wrap">
-          <div class="section-3__image"><img src="assets/Images/section-3-image-1.png" alt=""/></div>
+          <div class="section-3__image" data-aos="fade-right" data-aos-duration="1000"><img src="assets/Images/section-3-image-1.png" alt=""/></div>
           <div class="section-3__content">
-            <h2 class="section-3__title">Thêm Một Bạn</h2>
-            <h3 class="section-3__sub-title">Thêm Ngàn Niềm Vui!</h3>
-            <p class="section-3__desc">Có một con thú cưng đồng nghĩa với việc bạn có thêm niềm vui mới. Chúng tôi có hơn 200 con thú cưng khác nhau có thể đáp ứng nhu cầu của bạn!</p>
-            <div class="section-3__buttons"><a class="button button--outline" href="#">Giới thiệu<i class="fa-regular fa-circle-play"></i></a><a class="button" href="#">Khám phá ngay</a></div>
+            <h2 class="section-3__title" data-aos="fade-up" data-aos-duration="1000">Thêm Một Bạn</h2>
+            <h3 class="section-3__sub-title" data-aos="fade-up" data-aos-duration="1100">Thêm Ngàn Niềm Vui!</h3>
+            <p class="section-3__desc" data-aos="fade-up" data-aos-duration="1200">Có một con thú cưng đồng nghĩa với việc bạn có thêm niềm vui mới. Chúng tôi có hơn 200 con thú cưng khác nhau có thể đáp ứng nhu cầu của bạn!</p>
+            <div class="section-3__buttons"><a class="button button--outline" href="#" data-aos="fade-up" data-aos-duration="1300">Giới thiệu<i class="fa-regular fa-circle-play"></i></a><a class="button" href="#" data-aos="fade-up" data-aos-duration="1400">Khám phá ngay</a></div>
           </div>
         </div>
       </div>
@@ -281,7 +284,7 @@
     <!--Footer-->
     <footer class="footer">
       <div class="container">
-        <div class="footer__top">
+        <div class="footer__top" data-aos="zoom-in">
           <div class="footer__content">Đăng ký ngay để không bỏ lỡ các chương trình của chúng tôi</div>
           <div class="footer__form">
             <form action="">
@@ -302,5 +305,9 @@
       </div>
     </footer>
     <!--End Footer-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

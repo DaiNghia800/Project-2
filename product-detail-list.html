@@ -4,8 +4,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-sacle=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/style.css"/>
-    <title>Trang chi tiet các sản phẩm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css"/>
+    <title>Trang chi tiết các sản phẩm</title>
   </head>
   <body> 
     <!-- Header -->
@@ -38,8 +41,32 @@
       <div class="container">
         <div class="product-info__wrap">
           <div class="product-info__left">
-            <div class="product-info__images-main"><img src="assets/Images/product-1.jpg"/></div>
-            <div class="product-info__images-thumb"><img src="assets/Images/product-1.jpg"/><img src="assets/Images/product-1.jpg"/><img src="assets/Images/product-1.jpg"/><img src="assets/Images/product-1.jpg"/><img src="assets/Images/product-1.jpg"/></div>
+            <div class="product-info__images-main">
+              <div class="swiper mySwiper2" id="sliderImageMain">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                </div>
+                <div class="swiper-button-next">  </div>
+                <div class="swiper-button-prev">  </div>
+              </div>
+            </div>
+            <div class="product-info__images-thumb">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                  <div class="swiper-slide"><img src="assets/Images/product-1.jpg"/></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="product-info__right">
             <div class="breadcrumb">
@@ -94,12 +121,12 @@
     <div class="section-2">
       <div class="container">
         <div class="box-head">
-          <div class="box-head__left">
+          <div class="box-head__left" data-aos="fade-right">
             <div class="box-head__sub-title">Có gì mới?</div>
             <div class="box-head__title">Xem thêm chó con</div>
           </div>
         </div>
-        <div class="section-2__wrap">
+        <div class="section-2__wrap" data-aos="fade-up" data-aos-duration="1800">
           <div class="product-item ">
             <div class="product-item__image"><a href="#"> <img src="assets/Images/product-1.jpg" alt="MO231-Pomeranian Trắng"/></a></div>
             <div class="product-item__content">
@@ -155,7 +182,7 @@
     <!--Footer-->
     <footer class="footer">
       <div class="container">
-        <div class="footer__top">
+        <div class="footer__top" data-aos="zoom-in">
           <div class="footer__content">Đăng ký ngay để không bỏ lỡ các chương trình của chúng tôi</div>
           <div class="footer__form">
             <form action="">
@@ -176,5 +203,9 @@
       </div>
     </footer>
     <!--End Footer-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

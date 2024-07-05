@@ -2,7 +2,7 @@ extends layouts/default.pug
 include mixins/product-item.pug
 
 block title
- title Trang chi tiet các sản phẩm
+ title Trang chi tiết các sản phẩm
 
 block main 
   
@@ -12,13 +12,37 @@ block main
       .product-info__wrap
         .product-info__left
            .product-info__images-main
-             img(src="assets/Images/product-1.jpg")
+             div(class="swiper mySwiper2" id="sliderImageMain")
+               div(class="swiper-wrapper")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+               div(class="swiper-button-next")   
+               div(class="swiper-button-prev")   
            .product-info__images-thumb
-             img(src="assets/Images/product-1.jpg")
-             img(src="assets/Images/product-1.jpg")
-             img(src="assets/Images/product-1.jpg")
-             img(src="assets/Images/product-1.jpg")
-             img(src="assets/Images/product-1.jpg")
+             div(class="swiper mySwiper")
+               div(class="swiper-wrapper")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
+                 div(class="swiper-slide")
+                  img(src="assets/Images/product-1.jpg")
         .product-info__right
           //-Breadcrumb
           div(class="breadcrumb")
@@ -82,10 +106,15 @@ block main
   div(class="section-2")
     div(class="container")
         div(class="box-head")
-            div(class="box-head__left")
+            div(class="box-head__left" 
+                data-aos="fade-right"
+                )
                 div(class="box-head__sub-title") Có gì mới?
                 div(class="box-head__title") Xem thêm chó con
-        div(class="section-2__wrap")
+        div(class="section-2__wrap" 
+        data-aos="fade-up"
+        data-aos-duration="1800"
+        )
             +product-item("assets/Images/product-1.jpg", 
             "MO231-Pomeranian Trắng", 
             "Đực", 
